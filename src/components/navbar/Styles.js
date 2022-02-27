@@ -12,9 +12,11 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       alignItems: 'center',
       gap: theme.spacing(1),
+      textDecoration: 'none',
+      color: 'white'
     },
     moneyIcon: {
-      fontSize: '40px',
+      fontSize: '45px',
       cursor: 'Pointer',
       [theme.breakpoints.down('sm')]: {
         fontSize: '35px'
@@ -37,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       alignItems: 'center',
       gap: theme.spacing(2),
+      [theme.breakpoints.down(670)]: {
+        display: 'none'
+      }
     },
     links: {
       textDecoration: 'none',
@@ -63,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     },
     input: {
       color: 'white',
-    }
+    },
   }))
   
 export default useStyles;
