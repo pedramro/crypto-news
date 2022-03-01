@@ -5,10 +5,10 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 
-function RightBar() {
+function About() {
   return (
-    <div>Right bar</div>
+    <div></div>
   )
 }
 
-export default RightBar
+export default About
