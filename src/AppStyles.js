@@ -12,12 +12,6 @@ const useStyles = makeStyles(theme => ({
             paddingRight: theme.spacing(5),
         },
     },
-    main: {
-        boxShadow: '0 0 15px rgba(0, 0, 0, 0.25)',
-        borderRadius: '5px',
-        padding: '10px 10px',
-        
-    },
     rightBar: {
         boxShadow: '0 0 15px rgba(0, 0, 0, 0.25)',
         borderRadius: '5px',
