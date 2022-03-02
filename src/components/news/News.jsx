@@ -37,7 +37,7 @@ function News({ news, getNews }) {
                   <Box className={classes.infoWrapper}>
                     <Box className={classes.dateSource}>
                       <Typography className={classes.info}>Date: {item.date}</Typography>
-                      <Typography className={classes.info}>Source: {item.source}</Typography>
+                      <Typography className={classes.info}>{item.source}</Typography>
                     </Box>
                     <Box>
                       <Button variant='contained' color='primary' className={classes.InfoBtn} href={item.link} target='_blank'>Read more</Button>
@@ -54,7 +54,7 @@ function News({ news, getNews }) {
 
 const mapStateToProps = (state) => {
   return{
-    news: state
+    news: state,
   }
 }
 

@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('xs')]: {
             display: 'none'
         },
+    },
+    rightBarGrid: {
+        marginTop: '12px'
     }
 }))
 

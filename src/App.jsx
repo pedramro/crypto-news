@@ -21,7 +21,7 @@ function App() {
                 </Routes>
               </Box>
             </Grid>
-            <Grid item sm={4}>
+            <Grid className={classes.rightBarGrid} item sm={4}>
               <Box className={classes.rightBar}>
                 <RightBar />
               </Box>
