@@ -12,17 +12,12 @@ const useStyles = makeStyles(theme => ({
             paddingRight: theme.spacing(5),
         },
     },
-    rightBar: {
-        boxShadow: '0 0 15px rgba(0, 0, 0, 0.25)',
-        borderRadius: '5px',
-        padding: '10px 10px',
+    rightBarGrid: {
+        marginTop: '12px',
         [theme.breakpoints.down('xs')]: {
             display: 'none'
         },
     },
-    rightBarGrid: {
-        marginTop: '12px'
-    }
 }))
 
 export default useStyles

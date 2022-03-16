@@ -1,5 +1,5 @@
-import useStyles from './Styles'
-import News from '../../components/news/News'
+import useStyles from './Styles';
+import News from '../../components/news/News';
 
 
 function Home() {

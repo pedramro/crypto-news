@@ -4,6 +4,7 @@ import { NavBar } from "./components/navbar/NavBar"
 import RightBar from './components/rightBar/RightBar'
 import { Grid, Box } from '@material-ui/core';
 import useStyles from './AppStyles'
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -22,11 +23,10 @@ function App() {
               </Box>
             </Grid>
             <Grid className={classes.rightBarGrid} item sm={4}>
-              <Box className={classes.rightBar}>
-                <RightBar />
-              </Box>
+              <RightBar />
             </Grid>
           </Grid>
+        <Footer />
       </BrowserRouter>
     </div>
   );
