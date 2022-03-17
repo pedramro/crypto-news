@@ -13,7 +13,6 @@ function News({ news, getNews }) {
 
   useEffect(() => {
     getData.news().then(response => getNews(response.data))
-    console.log(news);
   }, [])
 
   return (
