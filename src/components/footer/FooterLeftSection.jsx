@@ -13,6 +13,10 @@ const useStyle = makeStyles(theme => ({
         gap: '5px',
         marginTop: '10px',
     },
+    text: {
+        fontSize: '13px',
+        color: 'rgba(255, 255, 255, 0.60)'
+    },
     textField: {
         color: 'black',
         backgroundColor: 'rgba(255, 255, 255, 0.70)',
@@ -62,7 +66,7 @@ function FooterLeftSection() {
             setError(false)
             setInputColor('primary')
             setHelperText('Thanks for subscribe!')
-            inputValue.value = 'sss' 
+            inputValue.value = '' 
         } else {
             setError(true)
             setInputColor('secondary')
@@ -79,7 +83,7 @@ function FooterLeftSection() {
                 <Typography variant="h6">STAY CONNECTED</Typography>
             </Box>
             <Box>
-                <Typography variant="body2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab possimus reprehenderit magni laborum nesciunt necessitatibus.</Typography>
+                <Typography variant="body2" className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab possimus reprehenderit magni laborum nesciunt necessitatibus.</Typography>
             </Box>
             <Box>
                 <form className={classes.formWrapper} onSubmit={onSubmit}>

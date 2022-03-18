@@ -4,7 +4,6 @@ import { getData } from '../service/Service'
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getAllNews } from '../redux/actions'
-import { Link } from 'react-router-dom'
 
 
 

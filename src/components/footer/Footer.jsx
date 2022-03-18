@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Typography } from "@material-ui/core"
-import { Link } from "react-router-dom"
+import FooterMiddleSection from "./FooterMiddleSection"
 import useStyles from "./Styles"
 import FooterLeftSection from "./FooterLeftSection"
 
@@ -13,7 +13,7 @@ function Footer() {
                 <FooterLeftSection />
             </Grid>
             <Grid item xs={12} sm={4}>
-                test
+                <FooterMiddleSection />
             </Grid>
             <Grid item xs={12} sm={4}>
                 test
