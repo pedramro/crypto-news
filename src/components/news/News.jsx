@@ -1,18 +1,13 @@
 import { Box, Button, Card, Typography } from '@material-ui/core'
 import useStyles from './Styles'
-import { getData } from '../service/Service'
-import { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { getAllNews } from '../redux/actions'
 
 
 
-function News({ news, getNews }) {
+function News({ news }) {
   const classes = useStyles()
 
-  useEffect(() => {
-    getData.news().then(response => getNews(response.data))
-  }, [])
+
 
   return (
     <>
@@ -56,10 +51,5 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getNews: (news) => dispatch(getAllNews(news))
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(News)
+export default connect(mapStateToProps)(News)

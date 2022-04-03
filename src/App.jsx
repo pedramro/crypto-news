@@ -5,10 +5,20 @@ import RightBar from './components/rightBar/RightBar'
 import { Grid, Box } from '@material-ui/core';
 import useStyles from './AppStyles'
 import Footer from './components/footer/Footer';
+import FullNews from './pages/fullNews/FullNews';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getData } from './components/service/Service';
+import { getAllNews } from './components/redux/actions';
 
-function App() {
+function App({ news, getNews}) {
 
   const classes = useStyles()
+
+  useEffect(() => {
+    getData.news().then(response => getNews(response.data))
+    // console.log(news);
+  }, [])
 
   return (
     <div className="App">
@@ -19,6 +29,7 @@ function App() {
               <Box className={classes.main}>
                 <Routes>
                     <Route path='/' element={<Home />} />
+                    <Route path='/:nvg' element={<FullNews />} />
                 </Routes>
               </Box>
             </Grid>
@@ -32,4 +43,16 @@ function App() {
   );
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+    news: state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getNews: (news) => dispatch(getAllNews(news))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (App)

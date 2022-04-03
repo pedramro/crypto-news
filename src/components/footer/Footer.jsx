@@ -1,7 +1,8 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core"
+import { Box, Container, Divider, Grid, Typography } from "@material-ui/core"
 import FooterMiddleSection from "./FooterMiddleSection"
 import useStyles from "./Styles"
 import FooterLeftSection from "./FooterLeftSection"
+import FooterRightSection from "./FooterRightSection"
 
 function Footer() {
     const classes = useStyles()
@@ -16,9 +17,13 @@ function Footer() {
                 <FooterMiddleSection />
             </Grid>
             <Grid item xs={12} sm={4}>
-                test
+                <FooterRightSection />
             </Grid>
         </Grid>
+        <Divider className={classes.divider} />
+        <Box className={classes.copyRight}>
+          <Typography variant="body2">Designed by Pedram Roshani</Typography>
+        </Box>
       </Container>
     </Box>
   )

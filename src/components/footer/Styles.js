@@ -31,6 +31,17 @@ const useStyles = makeStyles(theme => ({
             display: 'none'
         }
     },
+    copyRight: {
+        display: 'flex',
+        justifyContent: 'center',
+        padding: '10px 0',
+        fontSize: '10px',
+        color: 'yellow'
+    },
+    divider: {
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        margin: '5px 0'
+    }
 }))
 
 export default useStyles;

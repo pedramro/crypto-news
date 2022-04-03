@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         display: '-webkit-box',
         lineClamp: 2,
         boxOrient: 'vertical',
+        textDecoration: 'none'
     },
 }))
 

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Box, List, Typography, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles';
 import { Email, GitHub, Phone } from '@material-ui/icons';

@@ -1,10 +1,11 @@
-import { Box, Divider, Link, Typography, Card } from '@material-ui/core';
+import { Box, Divider, Typography, Card } from '@material-ui/core';
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import useStyles from './Styles';
 
 
 function RightBar({ news }) {
-  const i = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  const i = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const classes = useStyles();
   return (
     <Card className={classes.rightBarWrapper} elevation={6}>
@@ -14,11 +15,12 @@ function RightBar({ news }) {
       {
         i.map((num, index) => {
           const element = news[num]
+          const nvg = element?.title
           return (
             <Box key={index}>
               <Divider />
               <Box className={classes.latestNews}>
-                <Link className={classes.link} variant='subtitle1' component='h2'>{element?.title}</Link>
+                <Link to={`/${nvg}`} className={classes.link} variant='subtitle1' component='h2'>{element?.title}</Link>
               </Box>
               <Divider />
             </Box>
