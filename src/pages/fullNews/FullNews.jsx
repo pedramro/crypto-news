@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { Box, Typography } from "@material-ui/core";
+import useStyles from './Styles'
 
 function FullNews({ news }) {
+
+  const classes = useStyles()
 
   const { nvg } = useParams()
 
@@ -12,11 +14,19 @@ function FullNews({ news }) {
       {
         news.map(element => {
           if (element.title.slice(0, 21) === nvg.slice(0, 21)) {
-            console.log(element.title.length);
             return (
-              <Box key={element?.title}>
+              <Box key={element?.title} className={classes.boxContainer}>
                 <Box>
-                  <Typography>{element?.title}</Typography>
+                  <Typography variant="h5" component="h1">{element?.title}</Typography>
+                </Box>
+                <Box className={classes.imgWrapper}>
+                  <img width='50%' src={element.tags[0].icon} alt="" />
+                </Box>
+                <Box>
+                  <Typography variant="body1">{element.description}</Typography>
+                </Box>
+                <Box>
+                  
                 </Box>
               </Box>
             )

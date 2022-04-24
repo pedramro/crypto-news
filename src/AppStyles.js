@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
             paddingRight: theme.spacing(5),
         },
     },
+    main: {
+        position: 'relative',
+    },
     rightBarGrid: {
         marginTop: '12px',
         [theme.breakpoints.down('xs')]: {

@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getData } from './components/service/Service';
 import { getAllNews } from './components/redux/actions';
+import Contact from './pages/contact/Contact'
+import About from './pages/about/About'
 
 function App({ news, getNews}) {
 
@@ -25,11 +27,13 @@ function App({ news, getNews}) {
       <BrowserRouter>
         <NavBar />
           <Grid container spacing={1} className={classes.container}>
-            <Grid item xs={12} sm={8}>
-              <Box className={classes.main}>
+            <Grid item xs={12} sm={8} className={classes.main}>
+              <Box>
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/:nvg' element={<FullNews />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/about' element={<About />} />
                 </Routes>
               </Box>
             </Grid>

@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
 
 function About() {
   return (
-    <div></div>
+    <div>aout</div>
   )
 }
 

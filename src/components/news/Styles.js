@@ -16,6 +16,14 @@ const useStyles = makeStyles(theme => ({
             flexDirection: 'column'
         }
     },
+    titleLink: {
+        textDecoration: 'none',
+        color: 'black',
+        transition: 'all 0.2s',
+        '&:hover': {
+            color: '#fca503'
+        },
+    },
     imageWrapper: {
         height: '180px',
         [theme.breakpoints.up('lg')]: {

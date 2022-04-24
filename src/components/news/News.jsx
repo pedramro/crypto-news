@@ -1,13 +1,12 @@
 import { Box, Button, Card, Typography } from '@material-ui/core'
 import useStyles from './Styles'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 
 function News({ news }) {
   const classes = useStyles()
-
-
 
   return (
     <>
@@ -21,7 +20,9 @@ function News({ news }) {
                 <Box className={classes.textWrapper}>
                   <Box>
                     <Box>
-                      <Typography variant='h5' component='h1'>{item.title}</Typography>
+                      <Link className={classes.titleLink} to={`/${item.title}`}>
+                        <Typography variant='h5' component='h1'>{item.title}</Typography>
+                      </Link>
                     </Box>
                     <Box>
                       <Typography variant='body2' component='p'>{item.description}</Typography>
