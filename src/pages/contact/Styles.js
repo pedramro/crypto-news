@@ -11,6 +11,11 @@ const useStyles = makeStyles(theme => ({
         overflow: 'hidden',
         borderRadius: '5px',
         backgroundColor: '#2b2b2b',
+        padding: '10%',
+        [theme.breakpoints.down('xs')]: {
+            transform: 'translate(0%, 0%)',
+            position: 'static'
+        }
     },
     items: {
         color: 'white',
